@@ -23,12 +23,12 @@ import Mccm.Pega.OSF.PegaTest.OSFAPICallCaptResponseTest;
 import Mccm.Pega.Outbound.PegaTestBase.TestBase;
 import Mccm.Pega.QAUtil.TestUtil;
 import Mccm.Pega.excel.utility.Excel_Reader;
- 
+
 
 public class ExtractChannelFile extends TestBase {
 
 	public static String ExcelFilePath;
- 
+
 
 	@FindBy(xpath="(//h3[@class='layout-group-item-title'])[5]")
 	WebElement Recordclk;
@@ -89,23 +89,23 @@ public class ExtractChannelFile extends TestBase {
 
 	public void Recordclk() throws InterruptedException
 	{
-//		log.info("**** Started the Outbond Extract Channel File Validation****");
+		//		log.info("**** Started the Outbond Extract Channel File Validation****");
 		//wait.until(ExpectedConditions.visibilityOf(Recordclk));
-			 	Thread.sleep(8000);
-				Recordclk.click( );
-				Thread.sleep(8000);
-		
+		Thread.sleep(8000);
+		Recordclk.click( );
+		Thread.sleep(8000);
 
-	//	log.info("**** Click Record****");
+
+		//	log.info("**** Click Record****");
 
 	}
- 
+
 	public void SysAdmin() throws InterruptedException
 	{
 		Thread.sleep(8000);
 		SysAdmin.click( );
 		Thread.sleep(8000); 
-	//	log.info("**** Click SysAdmin****");
+		//	log.info("**** Click SysAdmin****");
 	}
 	public void javaexictor4() throws InterruptedException
 	{
@@ -116,7 +116,7 @@ public class ExtractChannelFile extends TestBase {
 	{
 		wait.until(ExpectedConditions.visibilityOf(webelement4));
 		webelement4.click( );
-	//	log.info("**** Click DynamicSystemSettins****");
+		//	log.info("**** Click DynamicSystemSettins****");
 	}
 
 	public void GetDataExtractDetails() throws InterruptedException
@@ -132,33 +132,52 @@ public class ExtractChannelFile extends TestBase {
 		wait.until(ExpectedConditions.visibilityOf(SerchClick));
 		SerchClick.click( );
 
-//		log.info("**** Search and Click ****");
+		System.out.println("**** Search and Click ****");
 	}
 	public void ClickGetDataExtractDetails() throws InterruptedException
 	{
 
 		wait.until(ExpectedConditions.elementToBeClickable(ClickReportdeftion));
 
-		ClickReportdeftion.click();
- 
-		 
-		wait.until(ExpectedConditions.elementToBeClickable(ClickGetDataExtractDetails));
-		ClickGetDataExtractDetails.click( );
-		 Thread.sleep(8000);
+		try {
 
-		 driver.manage().timeouts().pageLoadTimeout(180, TimeUnit.SECONDS);
-		
+			ClickReportdeftion.click();
+		}
+		catch(org.openqa.selenium.StaleElementReferenceException ex)
+		{
+
+			ClickReportdeftion.click();
+
+		}
+
+
+		wait.until(ExpectedConditions.elementToBeClickable(ClickGetDataExtractDetails));
+
+		try {
+
+			ClickGetDataExtractDetails.click( );
+		}
+		catch(org.openqa.selenium.StaleElementReferenceException ex)
+		{
+
+			ClickGetDataExtractDetails.click( );
+
+		}
+		Thread.sleep(8000);
+		System.out.println("****ClickGetDataExtractDetails Click ****");
+		driver.manage().timeouts().pageLoadTimeout(180, TimeUnit.SECONDS);
+
 	}
-	 
+
 	public void ActionClkGetDataExtractDetails() throws InterruptedException
 	{
 
-                  
-		 	 	wait.until(ExpectedConditions.visibilityOf(ActionClkGetDataExtractDetails));
-		 	 
-		 		ActionClkGetDataExtractDetails.click( );
 
- 
+		wait.until(ExpectedConditions.visibilityOf(ActionClkGetDataExtractDetails));
+
+		ActionClkGetDataExtractDetails.click( );
+
+
 
 	}
 
