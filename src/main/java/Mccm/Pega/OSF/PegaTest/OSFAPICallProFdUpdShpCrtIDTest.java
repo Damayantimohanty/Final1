@@ -26,6 +26,7 @@ public class OSFAPICallProFdUpdShpCrtIDTest extends TestBase  {
 	public static String json;
 	public static String mccminternaltrust;
 	public static String css1identity;
+	public static String OSF_URL_PF;
 
 	Logger log = Logger.getLogger(OSFAPICallProFdUpdShpCrtIDTest.class.getName());
 
@@ -51,9 +52,8 @@ public class OSFAPICallProFdUpdShpCrtIDTest extends TestBase  {
 
 			css1identity=general_ReadProperty("KEYSTORE_CLIENT_FILENAME");
 
-			URL urlForGetRequest = new URL("https://" + hostName + ":" + port
-					+ "/prweb/PRRestService/MCCMOSF/Services/ProcessFeedback");
-			log.info("requested url : " +urlForGetRequest);
+			OSF_URL_PF= general_ReadProperty("OSFPF_URL");
+			URL url = new URL(OSF_URL_PF);
 			String readLine = null;
 			//	System.setProperty("javax.net.ssl.keyStore",(KeystorePath+"/css1identity.jks"));  
 			System.setProperty("javax.net.ssl.keyStore",(KeystorePath+css1identity));  
@@ -79,7 +79,7 @@ public class OSFAPICallProFdUpdShpCrtIDTest extends TestBase  {
 
 			// Install the all-trusting host verifier
 			HttpsURLConnection.setDefaultHostnameVerifier(allHostsValid);
-			HttpsURLConnection connection = (HttpsURLConnection) urlForGetRequest.openConnection();
+			HttpsURLConnection connection = (HttpsURLConnection) url.openConnection();
 			connection.setRequestMethod("POST");
 			connection.setRequestProperty("x-mccm-usecase", "OSF_ProcessFeedback");
 			connection.setRequestProperty("X-MCCM-CorrelationID", "GUID like ad64557");

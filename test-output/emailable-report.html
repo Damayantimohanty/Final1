@@ -9,10 +9,62 @@
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Retried</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
 <tr><th colspan="8">Default suite</th></tr>
+<<<<<<< HEAD
 <tr><td><a href="#t0">Default test</a></td><td class="num">1</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">67,053</td><td></td><td></td></tr>
+=======
+<tr><td><a href="#t0">Default test</a></td><td class="num">5</td><td class="num">0</td><td class="num">0</td><td class="num attn">1</td><td class="num">2,796</td><td></td><td></td></tr>
+>>>>>>> branch 'develop' of ssh://git@github.dxc.com/DXC-VF/mccm_automation
 </table>
+<<<<<<< HEAD
 <table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Default suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Default test &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">Mccm.Pega.Outbound.PegaTest.DataLoadDetailsTest</td><td><a href="#m0">VerifyOutboundOracleCansadraDataLoadedSuccessfully</a></td><td rowspan="1">1625723939685</td><td rowspan="1">44667</td></tr></tbody>
+=======
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Default suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Default test &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">Mccm.Pega.OSF.PegaTest.OSF_GetNBA_ErrorCasesTest</td><td><a href="#m0">VerifyOSFCaptureResponseOutcomeAPIcallSuccessfully</a></td><td rowspan="1">1625817026938</td><td rowspan="1">275</td></tr><tr><th colspan="4">Default test &#8212; passed</th></tr><tr class="passedeven"><td rowspan="5">Mccm.Pega.OSF.PegaTest.OSF_GetNBA_ErrorCasesTest</td><td><a href="#m1">VerifyOSFCaptureResponseOutcomeAPIcallSuccessfully</a></td><td rowspan="5">1625817027472</td><td rowspan="5">243</td></tr><tr class="passedeven"><td><a href="#m2">VerifyOSFCaptureResponseOutcomeAPIcallSuccessfully</a></td></tr><tr class="passedeven"><td><a href="#m3">VerifyOSFCaptureResponseOutcomeAPIcallSuccessfully</a></td></tr><tr class="passedeven"><td><a href="#m4">VerifyOSFCaptureResponseOutcomeAPIcallSuccessfully</a></td></tr><tr class="passedeven"><td><a href="#m5">VerifyOSFCaptureResponseOutcomeAPIcallSuccessfully</a></td></tr></tbody>
+>>>>>>> branch 'develop' of ssh://git@github.dxc.com/DXC-VF/mccm_automation
 </table>
+<<<<<<< HEAD
 <h2>Default test</h2><h3 id="m0">Mccm.Pega.Outbound.PegaTest.DataLoadDetailsTest#VerifyOutboundOracleCansadraDataLoadedSuccessfully</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+=======
+<h2>Default test</h2><h3 id="m0">Mccm.Pega.OSF.PegaTest.OSF_GetNBA_ErrorCasesTest#VerifyOSFCaptureResponseOutcomeAPIcallSuccessfully</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>{&quot;Accounts&quot;:[{&quot;AccountID&quot;:&quot;1130541259&quot;,&quot;SI&quot;:&quot;MobileBAN&quot;}],&quot;VOID&quot;:&quot;12345678&quot;,&quot;SCClassification&quot;:&quot;SCL1234&quot;,&quot;ContainerName&quot;:&quot;OSF&quot;,&quot;Channel&quot;:&quot;OSF&quot;,&quot;Direction&quot;:&quot;Inbound&quot;}</td></tr><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: Status code is not 200 , expected [400] but found [200]
+	at org.testng.Assert.fail(Assert.java:99)
+	at org.testng.Assert.failNotEquals(Assert.java:1037)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:140)
+	at org.testng.Assert.assertEquals(Assert.java:122)
+	at org.testng.Assert.assertEquals(Assert.java:907)
+	at Mccm.Pega.OSF.PegaTest.OSF_GetNBA_ErrorCasesTest.VerifyOSFCaptureResponseOutcomeAPIcallSuccessfully(OSF_GetNBA_ErrorCasesTest.java:123)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:132)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:599)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:174)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:822)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:147)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:764)
+	at org.testng.TestRunner.run(TestRunner.java:585)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:286)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1218)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1140)
+	at org.testng.TestNG.runSuites(TestNG.java:1069)
+	at org.testng.TestNG.run(TestNG.java:1037)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m1">Mccm.Pega.OSF.PegaTest.OSF_GetNBA_ErrorCasesTest#VerifyOSFCaptureResponseOutcomeAPIcallSuccessfully</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>{&quot;Accounts&quot;:[{&quot;AccountID&quot;:&quot;1130541259122&quot;,&quot;SI&quot;:&quot;MobileBAN&quot;}],&quot;VOID&quot;:&quot;12345678&quot;,&quot;SCClassification&quot;:&quot;SCL&quot;,&quot;ContainerName&quot;:&quot;OSF&quot;,&quot;Channel&quot;:&quot;OSF&quot;,&quot;Direction&quot;:&quot;Inbound&quot;}</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m2">Mccm.Pega.OSF.PegaTest.OSF_GetNBA_ErrorCasesTest#VerifyOSFCaptureResponseOutcomeAPIcallSuccessfully</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>{&quot;&quot;:[{&quot;AccountID&quot;:&quot;1130541259122&quot;,&quot;SI&quot;:&quot;MobileBAN&quot;}],&quot;VOID&quot;:&quot;12345678&quot;,&quot;SCClassification&quot;:&quot;SCL&quot;,&quot;ContainerName&quot;:&quot;OSF&quot;,&quot;Channel&quot;:&quot;OSF&quot;,&quot;Direction&quot;:&quot;Inbound&quot;}</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m3">Mccm.Pega.OSF.PegaTest.OSF_GetNBA_ErrorCasesTest#VerifyOSFCaptureResponseOutcomeAPIcallSuccessfully</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>{&quot;Accounts&quot;:[{&quot;AccountID&quot;:&quot;1130541259&quot;,&quot;SI&quot;:&quot;MobileBAN344&quot;}],&quot;VOID&quot;:&quot;12345678&quot;,&quot;SCClassification&quot;:&quot;SCL&quot;,&quot;ContainerName&quot;:&quot;OSF&quot;,&quot;Channel&quot;:&quot;OSF&quot;,&quot;Direction&quot;:&quot;Inbound&quot;}</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m4">Mccm.Pega.OSF.PegaTest.OSF_GetNBA_ErrorCasesTest#VerifyOSFCaptureResponseOutcomeAPIcallSuccessfully</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>{&quot;Accounts&quot;:[{&quot;AccountID&quot;:&quot;1130541259&quot;,&quot;SI&quot;:&quot;MobileBAN&quot;}],&quot;VOID&quot;:&quot;&quot;,&quot;SCClassification&quot;:&quot;SCL&quot;,&quot;ContainerName&quot;:&quot;OSF&quot;,&quot;Channel&quot;:&quot;OSF&quot;,&quot;Direction&quot;:&quot;Inbound&quot;}</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m5">Mccm.Pega.OSF.PegaTest.OSF_GetNBA_ErrorCasesTest#VerifyOSFCaptureResponseOutcomeAPIcallSuccessfully</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>{&quot;Accounts&quot;:[{&quot;AccountID&quot;:&quot;&quot;,&quot;SI&quot;:&quot;MobileBAN&quot;}],&quot;VOID&quot;:&quot;12345678&quot;,&quot;SCClassification&quot;:&quot;SCL&quot;,&quot;ContainerName&quot;:&quot;OSF&quot;,&quot;Channel&quot;:&quot;OSF&quot;,&quot;Direction&quot;:&quot;Inbound&quot;}</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+>>>>>>> branch 'develop' of ssh://git@github.dxc.com/DXC-VF/mccm_automation
 </body>
 </html>

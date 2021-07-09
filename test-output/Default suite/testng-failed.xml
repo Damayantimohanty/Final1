@@ -1,13 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
+<suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
+<<<<<<< HEAD
       <class name="Mccm.Unix.Outbound.App_Unix_Outbound_Extract_Test">
+=======
+      <class name="Mccm.Pega.OSF.PegaTest.OSF_GetNBA_ErrorCasesTest">
+>>>>>>> branch 'develop' of ssh://git@github.dxc.com/DXC-VF/mccm_automation
         <methods>
+<<<<<<< HEAD
           <include name="VerifyOutboundExtracDataLoadedSuccessfully"/>
+=======
+          <include name="VerifyOSFCaptureResponseOutcomeAPIcallSuccessfully" invocation-numbers="2"/>
+>>>>>>> branch 'develop' of ssh://git@github.dxc.com/DXC-VF/mccm_automation
         </methods>
+<<<<<<< HEAD
       </class> <!-- Mccm.Unix.Outbound.App_Unix_Outbound_Extract_Test -->
+=======
+      </class> <!-- Mccm.Pega.OSF.PegaTest.OSF_GetNBA_ErrorCasesTest -->
+>>>>>>> branch 'develop' of ssh://git@github.dxc.com/DXC-VF/mccm_automation
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

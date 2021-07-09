@@ -22,8 +22,9 @@ public class DataExtractScriptsExecution  extends general_ReadProperty {
 	public static String DataExtractScriptsExecution_NBA_KIASEPOS;
 	
 	/**
+	 * @throws InterruptedException 
 	 */
-	public static void main(Object args) {
+	public static void main(Object args) throws InterruptedException {
 // 		String host="localhost";
 // 		String user="mccm02";
 // 		String password="unix11";
@@ -51,7 +52,7 @@ public class DataExtractScriptsExecution  extends general_ReadProperty {
 		 * host=readFile.getCellValue("EnvDetails", rowIndex, hostColIndex);
 		 */
 	//  String command="ksh /opt/SP/mccm/SYSN/mccm_dataload/extract/scripts/Data_Extract_wrapper.ksh NBA_ONB";
-		
+		 Thread.sleep(8000);
  		 String command= general_ReadProperty("DataExtractScriptsExecution_NBA_ONB");
 		 
 		try{

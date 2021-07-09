@@ -33,6 +33,7 @@ public class OSFAPICallCaptResponseTest extends TestBase  {
 	public static String json;
 	public static String mccminternaltrust;
 	public static String css1identity;
+	public static String OSF_URL_CR;
 
 	//public static Logger log =LogManager.getLogger(OSFAPICallCaptResponseTest.class.getName());
 	
@@ -68,16 +69,15 @@ public class OSFAPICallCaptResponseTest extends TestBase  {
 			log.info("Keystorepassword : " +css1identity);
 			log.info("**** Getting the OSF CaptureResponse URL ****");
 
-			URL urlForGetRequest = new URL("https://" + hostName + ":" + port
-					+ "/prweb/PRRestService/MCCMOSF/Services/CaptureResponse");
-			log.info("requested url : " +urlForGetRequest);
+			OSF_URL_CR= general_ReadProperty("OSFCR_URL");
+			URL url = new URL(OSF_URL_CR);
 			
 			String readLine = null;
-			//		System.setProperty("javax.net.ssl.keyStore",(KeystorePath+"/css1identity.jks")); 
+			//	System.setProperty("javax.net.ssl.keyStore",(KeystorePath+"/css1identity.jks")); 
 			System.setProperty("javax.net.ssl.keyStore",(KeystorePath+css1identity));  
 			System.setProperty("javax.net.ssl.keyStorePassword", Keystorepassword);
 			System.setProperty("javax.net.ssl.keyStoreType", "JKS");
-			//	System.setProperty("javax.net.ssl.trustStore",(KeystorePath+"/mccminternaltrust.jks"));
+			//System.setProperty("javax.net.ssl.trustStore",(KeystorePath+"/mccminternaltrust.jks"));
 			System.setProperty("javax.net.ssl.trustStore",(KeystorePath+mccminternaltrust));
 			System.setProperty("javax.net.ssl.trustStorePassword", Keystorepassword);
 			System.setProperty("javax.net.ssl.trustStoreType", "JKS");
@@ -96,7 +96,7 @@ public class OSFAPICallCaptResponseTest extends TestBase  {
 
 			// Install the all-trusting host verifier
 			HttpsURLConnection.setDefaultHostnameVerifier(allHostsValid);
-			HttpsURLConnection connection = (HttpsURLConnection) urlForGetRequest.openConnection();
+			HttpsURLConnection connection = (HttpsURLConnection) url.openConnection();
 			connection.setRequestMethod("POST");
 			connection.setRequestProperty("x-mccm-usecase", "OSF_CaptureResponse");
 			connection.setRequestProperty("X-MCCM-CorrelationID", "GUID like ad64557");

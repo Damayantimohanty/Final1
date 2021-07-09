@@ -21,10 +21,11 @@ public class Excel_Reader extends TestBase {
 	private FileInputStream fis;
 	private FileOutputStream fos;
 	private XSSFWorkbook wb;
-	
-	
-	public  Excel_Reader(String FilePath)
-	{
+	private XSSFSheet sheet;
+	private XSSFCell cell;
+	private XSSFRow row;
+
+	public Excel_Reader(String FilePath) {
 		file = new File(FilePath);
 		try {
 			fis = new FileInputStream(file);
@@ -45,19 +46,17 @@ public class Excel_Reader extends TestBase {
 			e.printStackTrace();
 		}
 	}
-	
-	public String findFirstSheetName()
-	{
+
+	public String findFirstSheetName() {
 		String sheetName = wb.getSheetName(0);
 		return sheetName;
-		
+
 	}
-	
-	public void changeSheetName(String newSheetName)
-	{
+
+	public void changeSheetName(String newSheetName) {
 		wb.setSheetName(0, newSheetName);
 		try {
-			//Save the sheet after changing the file name
+			// Save the sheet after changing the file name
 			write();
 		} catch (FileNotFoundException e) {
 			// TODO Auto-generated catch block
@@ -67,37 +66,60 @@ public class Excel_Reader extends TestBase {
 			e.printStackTrace();
 		}
 	}
-	
-	
-	public int getRowCount(String sheetName)
-	{
+
+	public int getRowCount(String sheetName) {
 		XSSFSheet sheet = wb.getSheet(sheetName);
-		if (sheet == null)
-		{
+		if (sheet == null) {
 			return 0;
 		}
-			return sheet.getLastRowNum();
-		
+		return sheet.getLastRowNum();
+
 	}
-	
-	
-	
-	public int getCellCount(String sheetName, int rowIndex)
-	{
-		XSSFSheet sheet=wb.getSheet(sheetName);
-		if (sheet == null)
-		{
+
+	public int getrowsnum(String sheetName) {
+		XSSFSheet sheet = wb.getSheet(sheetName);
+		return sheet.getPhysicalNumberOfRows();
+	}
+
+	public XSSFRow getfirstrow(String sheetName) {
+		XSSFSheet sheet = wb.getSheet(sheetName);
+		return sheet.getRow(0);
+	}
+
+	public XSSFRow getfirstrow1(String sheetName, int i) {
+		XSSFSheet sheet = wb.getSheet(sheetName);
+		return sheet.getRow(i + 1);
+	}
+
+	public XSSFCell getcell1(String sheetName, int j) {
+		int i = 0;
+		XSSFSheet sheet = wb.getSheet(sheetName);
+		row = sheet.getRow(i + 1);
+		cell = row.getCell(j);
+		return cell;
+	}
+
+	public int getlastcellnum(String sheetName) {
+		XSSFSheet sheet = wb.getSheet(sheetName);
+		XSSFRow row = sheet.getRow(0);
+
+		return row.getLastCellNum();
+
+	}
+
+	public int getCellCount(String sheetName, int rowIndex) {
+		XSSFSheet sheet = wb.getSheet(sheetName);
+		if (sheet == null) {
 			return 0;
 		}
 		XSSFRow row = sheet.getRow(rowIndex);
-		if (row == null)
-		{
+		if (row == null) {
 			return 0;
 		}
-		return row.getLastCellNum(); 
-		
+		return row.getLastCellNum();
+
 	}
-	
+
 	public String getCellValue(String sheetName, int row1, int cellIndex) {
 		XSSFSheet sheet = wb.getSheet(sheetName);
 		if (sheet == null) {
@@ -113,41 +135,37 @@ public class Excel_Reader extends TestBase {
 		}
 		return cell.toString().trim();
 	}
-	
-	public void writeNumericCellValue(String sheetName, int rowIndex,
-			int cellIndex, double value) throws IOException {
-		XSSFCell cell = getCell(sheetName, rowIndex, cellIndex);
-		cell.setCellValue(value);
-		write();
-	}
-	
 
-	
-	public void writeStringCellValue(String sheetName, int rowIndex,
-			int cellIndex, String value) throws IOException {
+	public void writeNumericCellValue(String sheetName, int rowIndex, int cellIndex, double value) throws IOException {
 		XSSFCell cell = getCell(sheetName, rowIndex, cellIndex);
 		cell.setCellValue(value);
 		write();
 	}
-	
-	public void writeBooleanCellValue(String sheetName, int rowIndex,int cellIndex, Boolean value) throws IOException {
+
+	public void writeStringCellValue(String sheetName, int rowIndex, int cellIndex, String value) throws IOException {
 		XSSFCell cell = getCell(sheetName, rowIndex, cellIndex);
 		cell.setCellValue(value);
 		write();
 	}
-	
-	public void writeDateCellValue(String sheetName, int rowIndex,int cellIndex, Date value) throws IOException {
+
+	public void writeBooleanCellValue(String sheetName, int rowIndex, int cellIndex, Boolean value) throws IOException {
 		XSSFCell cell = getCell(sheetName, rowIndex, cellIndex);
 		cell.setCellValue(value);
 		write();
 	}
-	
+
+	public void writeDateCellValue(String sheetName, int rowIndex, int cellIndex, Date value) throws IOException {
+		XSSFCell cell = getCell(sheetName, rowIndex, cellIndex);
+		cell.setCellValue(value);
+		write();
+	}
+
 	private void write() throws FileNotFoundException, IOException {
 		fos = new FileOutputStream(file);
 		wb.write(fos);
 		fos.close();
 	}
-	
+
 	private XSSFCell getCell(String sheetName, int rowIndex, int cellIndex) {
 		XSSFSheet sheet = wb.getSheet(sheetName);
 		if (sheet == null) {

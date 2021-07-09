@@ -29,6 +29,7 @@ public class OSFAPICallGetNBATest extends TestBase  {
 	public static String json;
 	public static String mccminternaltrust;
 	public static String css1identity;
+	public static String OSF_URL_NBA;
 
 	Logger log = Logger.getLogger(OSFAPICallGetNBATest.class.getName());
 
@@ -55,13 +56,12 @@ public class OSFAPICallGetNBATest extends TestBase  {
 			css1identity=general_ReadProperty("KEYSTORE_CLIENT_FILENAME");
 
 
-
-			URL urlForGetRequest = new URL("https://" + hostName + ":" + port +
-					"/prweb/PRRestService/MCCMOSF/Services/GetNBA");
+			OSF_URL_NBA= general_ReadProperty("OSFNBA_URL");
+			URL url = new URL(OSF_URL_NBA);
 
 
 			//	  	URL urlForGetRequest = new URL("https://ukwtsvulx386.elabs.svcs.entsvcs.net:18576/prweb/PRRestService/MCCMOSF/Services/GetNBA");  
-			log.info("requested url : " +urlForGetRequest);
+			
 
 			String readLine = null;
 			//	System.setProperty("javax.net.ssl.keyStore",(KeystorePath+"/css1identity.jks"));   
@@ -88,7 +88,7 @@ public class OSFAPICallGetNBATest extends TestBase  {
 
 			// Install the all-trusting host verifier
 			HttpsURLConnection.setDefaultHostnameVerifier(allHostsValid);
-			HttpsURLConnection connection = (HttpsURLConnection) urlForGetRequest.openConnection();
+			HttpsURLConnection connection = (HttpsURLConnection) url.openConnection();
 			connection.setRequestMethod("POST");
 
 			connection.setRequestProperty("x-mccm-usecase", "OSF_GetNBA");

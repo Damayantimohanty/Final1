@@ -1,25 +1,151 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<<<<<<< HEAD
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+=======
+<testng-results ignored="0" total="6" passed="5" failed="1" skipped="0">
+>>>>>>> branch 'develop' of ssh://git@github.dxc.com/DXC-VF/mccm_automation
   <reporter-output>
   </reporter-output>
+<<<<<<< HEAD
   <suite name="Default suite" duration-ms="67053" started-at="2021-07-08T11:28:37 IST" finished-at="2021-07-08T11:29:44 IST">
+=======
+  <suite started-at="2021-07-09T13:20:25 IST" name="Default suite" finished-at="2021-07-09T13:20:27 IST" duration-ms="2796">
+>>>>>>> branch 'develop' of ssh://git@github.dxc.com/DXC-VF/mccm_automation
     <groups>
     </groups>
+<<<<<<< HEAD
     <test name="Default test" duration-ms="67053" started-at="2021-07-08T11:28:37 IST" finished-at="2021-07-08T11:29:44 IST">
       <class name="Mccm.Pega.Outbound.PegaTest.DataLoadDetailsTest">
         <test-method status="PASS" signature="setup()[pri:0, instance:Mccm.Pega.Outbound.PegaTest.DataLoadDetailsTest@1f59a598]" name="setup" is-config="true" duration-ms="22341" started-at="2021-07-08T11:28:37 IST" finished-at="2021-07-08T11:28:59 IST">
+=======
+    <test started-at="2021-07-09T13:20:25 IST" name="Default test" finished-at="2021-07-09T13:20:27 IST" duration-ms="2796">
+      <class name="Mccm.Pega.OSF.PegaTest.OSF_GetNBA_ErrorCasesTest">
+        <test-method signature="VerifyOSFCaptureResponseOutcomeAPIcallSuccessfully(java.lang.String)[pri:0, instance:Mccm.Pega.OSF.PegaTest.OSF_GetNBA_ErrorCasesTest@62452cc9]" started-at="2021-07-09T13:20:25 IST" name="VerifyOSFCaptureResponseOutcomeAPIcallSuccessfully" data-provider="exceldata" finished-at="2021-07-09T13:20:26 IST" duration-ms="1072" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{"Accounts":[{"AccountID":"1130541259","SI":"MobileBAN"}],"VOID":"","SCClassification":"SCL","ContainerName":"OSF","Channel":"OSF","Direction":"Inbound"}]]>
+              </value>
+            </param>
+          </params>
+>>>>>>> branch 'develop' of ssh://git@github.dxc.com/DXC-VF/mccm_automation
           <reporter-output>
           </reporter-output>
+<<<<<<< HEAD
         </test-method> <!-- setup -->
         <test-method status="PASS" signature="VerifyOutboundOracleCansadraDataLoadedSuccessfully()[pri:1, instance:Mccm.Pega.Outbound.PegaTest.DataLoadDetailsTest@1f59a598]" name="VerifyOutboundOracleCansadraDataLoadedSuccessfully" duration-ms="44667" started-at="2021-07-08T11:28:59 IST" finished-at="2021-07-08T11:29:44 IST">
+=======
+        </test-method> <!-- VerifyOSFCaptureResponseOutcomeAPIcallSuccessfully -->
+        <test-method signature="VerifyOSFCaptureResponseOutcomeAPIcallSuccessfully(java.lang.String)[pri:0, instance:Mccm.Pega.OSF.PegaTest.OSF_GetNBA_ErrorCasesTest@62452cc9]" started-at="2021-07-09T13:20:26 IST" name="VerifyOSFCaptureResponseOutcomeAPIcallSuccessfully" data-provider="exceldata" finished-at="2021-07-09T13:20:26 IST" duration-ms="248" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{"Accounts":[{"AccountID":"","SI":"MobileBAN"}],"VOID":"12345678","SCClassification":"SCL","ContainerName":"OSF","Channel":"OSF","Direction":"Inbound"}]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
+        </test-method> <!-- VerifyOSFCaptureResponseOutcomeAPIcallSuccessfully -->
+        <test-method signature="VerifyOSFCaptureResponseOutcomeAPIcallSuccessfully(java.lang.String)[pri:0, instance:Mccm.Pega.OSF.PegaTest.OSF_GetNBA_ErrorCasesTest@62452cc9]" started-at="2021-07-09T13:20:26 IST" name="VerifyOSFCaptureResponseOutcomeAPIcallSuccessfully" data-provider="exceldata" finished-at="2021-07-09T13:20:27 IST" duration-ms="275" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{"Accounts":[{"AccountID":"1130541259","SI":"MobileBAN"}],"VOID":"12345678","SCClassification":"SCL1234","ContainerName":"OSF","Channel":"OSF","Direction":"Inbound"}]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[Status code is not 200 , expected [400] but found [200]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: Status code is not 200 , expected [400] but found [200]
+at org.testng.Assert.fail(Assert.java:99)
+at org.testng.Assert.failNotEquals(Assert.java:1037)
+at org.testng.Assert.assertEqualsImpl(Assert.java:140)
+at org.testng.Assert.assertEquals(Assert.java:122)
+at org.testng.Assert.assertEquals(Assert.java:907)
+at Mccm.Pega.OSF.PegaTest.OSF_GetNBA_ErrorCasesTest.VerifyOSFCaptureResponseOutcomeAPIcallSuccessfully(OSF_GetNBA_ErrorCasesTest.java:123)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:132)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:599)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:174)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:822)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:147)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:764)
+at org.testng.TestRunner.run(TestRunner.java:585)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)
+at org.testng.SuiteRunner.run(SuiteRunner.java:286)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1218)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1140)
+at org.testng.TestNG.runSuites(TestNG.java:1069)
+at org.testng.TestNG.run(TestNG.java:1037)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+ 
+          <reporter-output>
+          </reporter-output>
+ 
         </test-method> <!-- VerifyOutboundOracleCansadraDataLoadedSuccessfully -->
         <test-method status="PASS" signature="teardown()[pri:0, instance:Mccm.Pega.Outbound.PegaTest.DataLoadDetailsTest@1f59a598]" name="teardown" is-config="true" duration-ms="0" started-at="2021-07-08T11:29:44 IST" finished-at="2021-07-08T11:29:44 IST">
+ 
+        </test-method> <!-- VerifyOSFCaptureResponseOutcomeAPIcallSuccessfully -->
+        <test-method signature="VerifyOSFCaptureResponseOutcomeAPIcallSuccessfully(java.lang.String)[pri:0, instance:Mccm.Pega.OSF.PegaTest.OSF_GetNBA_ErrorCasesTest@62452cc9]" started-at="2021-07-09T13:20:27 IST" name="VerifyOSFCaptureResponseOutcomeAPIcallSuccessfully" data-provider="exceldata" finished-at="2021-07-09T13:20:27 IST" duration-ms="256" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{"Accounts":[{"AccountID":"1130541259","SI":"MobileBAN344"}],"VOID":"12345678","SCClassification":"SCL","ContainerName":"OSF","Channel":"OSF","Direction":"Inbound"}]]>
+              </value>
+            </param>
+          </params>
+ 
           <reporter-output>
           </reporter-output>
+ 
         </test-method> <!-- teardown -->
       </class> <!-- Mccm.Pega.Outbound.PegaTest.DataLoadDetailsTest -->
+ 
+        </test-method> <!-- VerifyOSFCaptureResponseOutcomeAPIcallSuccessfully -->
+        <test-method signature="VerifyOSFCaptureResponseOutcomeAPIcallSuccessfully(java.lang.String)[pri:0, instance:Mccm.Pega.OSF.PegaTest.OSF_GetNBA_ErrorCasesTest@62452cc9]" started-at="2021-07-09T13:20:27 IST" name="VerifyOSFCaptureResponseOutcomeAPIcallSuccessfully" data-provider="exceldata" finished-at="2021-07-09T13:20:27 IST" duration-ms="243" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{"Accounts":[{"AccountID":"1130541259122","SI":"MobileBAN"}],"VOID":"12345678","SCClassification":"SCL","ContainerName":"OSF","Channel":"OSF","Direction":"Inbound"}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- VerifyOSFCaptureResponseOutcomeAPIcallSuccessfully -->
+        <test-method signature="VerifyOSFCaptureResponseOutcomeAPIcallSuccessfully(java.lang.String)[pri:0, instance:Mccm.Pega.OSF.PegaTest.OSF_GetNBA_ErrorCasesTest@62452cc9]" started-at="2021-07-09T13:20:27 IST" name="VerifyOSFCaptureResponseOutcomeAPIcallSuccessfully" data-provider="exceldata" finished-at="2021-07-09T13:20:27 IST" duration-ms="240" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{"":[{"AccountID":"1130541259122","SI":"MobileBAN"}],"VOID":"12345678","SCClassification":"SCL","ContainerName":"OSF","Channel":"OSF","Direction":"Inbound"}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- VerifyOSFCaptureResponseOutcomeAPIcallSuccessfully -->
+      </class> <!-- Mccm.Pega.OSF.PegaTest.OSF_GetNBA_ErrorCasesTest -->
+ 
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

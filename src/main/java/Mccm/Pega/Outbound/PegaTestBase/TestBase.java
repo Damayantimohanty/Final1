@@ -37,6 +37,9 @@ import Mccm.Pega.OSF.OSFDMCCMSettings;
 import Mccm.Pega.OSF.OSFDSS;
 import Mccm.Pega.OSF.PegaMarktOSF;
 import Mccm.Pega.OSF.PegaPreChkValidOSFCampCd;
+import Mccm.Pega.OSF.PegaTest.OSF_CaptureResponse_ErrorCasesTest;
+import Mccm.Pega.OSF.PegaTest.OSF_GetNBA_ErrorCasesTest;
+import Mccm.Pega.OSF.PegaTest.OSF_ProcessFeedback_ErrorCasesTest;
 import Mccm.Pega.Outbound.PegaMain.DBConfigValdtn;
 import Mccm.Pega.Outbound.PegaMain.DataLoadDetails;
 import Mccm.Pega.Outbound.PegaMain.ExtractChannelFile;
@@ -110,6 +113,9 @@ public class TestBase {
 			PegaMarktOSF.ExcelFilePath=System.getProperty("user.dir");
 			PegaPreChkValidOSFCampCd.ExcelFilePath=System.getProperty("user.dir");
 			CalNBADMCCMSettings.ExcelFilePath=System.getProperty("user.dir");
+			OSF_CaptureResponse_ErrorCasesTest.ExcelFilePath=System.getProperty("user.dir");
+			OSF_ProcessFeedback_ErrorCasesTest.ExcelFilePath=System.getProperty("user.dir");
+			OSF_GetNBA_ErrorCasesTest.ExcelFilePath=System.getProperty("user.dir");
 
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
@@ -126,14 +132,22 @@ public class TestBase {
 		String headLessMode = prop.getProperty("headless");
 		if(browserName.equals("chrome")) {
 
+ 
 		 	System.setProperty("webdriver.chrome.driver", chromedriverPath + "/" + chromeDriver);
+ 
+		//	System.setProperty("webdriver.chrome.driver", chromedriverPath + "/" + chromeDriver);
+ 
 
 			String projectPath = System.getProperty("user.dir");
 
+ 
 		//	System.setProperty("webdriver.chrome.driver", projectPath+"/chromedriver/chromedriver.exe");  
+ 
+			System.setProperty("webdriver.chrome.driver", projectPath+"/chromedriver/chromedriver.exe");  
+ 
 
 
-			if(headLessMode.equals("true")) {
+			if(headLessMode.equals("false")) {
 
 				ChromeOptions chromeOptions = new ChromeOptions();
 				chromeOptions.addArguments("--no-sandbox");

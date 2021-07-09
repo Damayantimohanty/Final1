@@ -1,4 +1,13 @@
+<<<<<<< HEAD
 2021-07-06 11:19:44,585  INFO Mccm.Pega.Inbound.PegaMain.PegaMarketIntrctnHistry<strong>{1}</strong>:124 - ****OSF element click pegamrkting1 ****
 2021-07-06 11:20:08,738  INFO Mccm.Pega.Inbound.PegaMain.PegaMarketIntrctnHistry<strong>{1}</strong>:136 - **** OSF element click ClkReport****
 2021-07-06 11:20:24,877  INFO Mccm.Pega.Inbound.PegaMain.PegaMarketIntrctnHistry<strong>{1}</strong>:145 - **** OSF element click ClkIntractionHstry****
 2021-07-06 11:20:41,101  INFO Mccm.Pega.Inbound.PegaMain.PegaMarketIntrctnHistry<strong>{1}</strong>:155 - **** OSF element click ClkRecentIntrctnHstry ****
+=======
+2021-07-09 12:34:16,442  INFO Mccm.Pega.OSF.PegaTest.OSFAPICallGetNBATest<strong>{1}</strong>:46 - **** Started the OSF GET NBA API call ****
+2021-07-09 12:34:16,452  INFO Mccm.Pega.OSF.PegaTest.OSFAPICallGetNBATest<strong>{1}</strong>:78 - -----Successfully read the OSF GET NBA jSON Request file------
+2021-07-09 12:34:16,588 DEBUG Mccm.Pega.OSF.PegaTest.OSFAPICallGetNBATest<strong>{1}</strong>:98 - Header passed
+2021-07-09 12:34:18,419  INFO Mccm.Pega.OSF.PegaTest.OSFAPICallGetNBATest<strong>{1}</strong>:122 - response: {"Status":"Ok","Message":"","RankedResults":[{"Group":"Mobile","Issue":"Sales","InteractionID":"-1691017047152430815","OriginAccount":{"AccountID":"1130541259","SubscriptionID":"GSM1629905600","SI":"MobileBAN"},"Priority":0.0,"Channel":"OSF","Label":"Upsell Offer 1GB","CustomerID":"46189100","Direction":"Inbound","Name":"UpsellOffer1GB","Type":"Offer","NBAOfferID":"OSFNBA_WBM_ILSRED6_P","CampaignID":"P-626","Packages":[{"ProcessContext":"ILSBLU"},{"ProcessContext":"MIGCOC"}],"CommissionPoints":5,"ChannelRemarks":"OSF"}]}
+2021-07-09 12:34:18,420  INFO Mccm.Pega.OSF.PegaTest.OSFAPICallGetNBATest<strong>{1}</strong>:123 - 200
+2021-07-09 12:34:18,422  INFO Mccm.Pega.OSF.PegaTest.OSFAPICallGetNBATest<strong>{1}</strong>:126 - **** Ended the OSF GET NBA API call ****
+>>>>>>> branch 'develop' of ssh://git@github.dxc.com/DXC-VF/mccm_automation
